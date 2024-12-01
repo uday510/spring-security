@@ -28,7 +28,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-
     // bean to store users in memory (stores in map)
     @Bean
     public UserDetailsService userDetailsService() {
@@ -41,6 +40,8 @@ public class SecurityConfig {
         /**
          * Passwords are stored in encrypted form using bcrypt
          * {bcrypt} --> bcrypt encryption
+         *
+         * @returns InMemoryUserDetailsManager
          */
         UserDetails admin = User.withUsername("admin")
                 .password("{bcrypt}$2a$12$DyzXabyI6S/tJ4Vu7FmOtORj4ztlDCeUdWMJSGbcvS0/KmkRMPqQ6")
