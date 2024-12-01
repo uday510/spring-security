@@ -38,7 +38,6 @@ public class SecurityConfig {
          * {noop} --> no operation
          */
         UserDetails user = User.withUsername("user").password("{noop}User@123454321").authorities("read").build();
-
         /**
          * Passwords are stored in encrypted form using bcrypt
          * {bcrypt} --> bcrypt encryption
